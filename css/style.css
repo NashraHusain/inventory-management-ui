@@ -1,0 +1,271 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAP Fiori Inventory Management — Custom Stylesheet
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── CSS Variables ──────────────────────────────────────────── */
+:root {
+    --brand-primary:   #0a6ed1;
+    --brand-dark:      #085caf;
+    --brand-light:     #e8f1fb;
+    --success:         #188918;
+    --warning:         #e9730c;
+    --error:           #bb0000;
+    --surface:         #ffffff;
+    --bg:              #f5f6f8;
+    --border:          #e0e0e0;
+    --text-primary:    #1a1a1a;
+    --text-secondary:  #6b6b6b;
+    --shadow-sm:       0 2px 8px rgba(0,0,0,.06);
+    --shadow-md:       0 4px 20px rgba(0,0,0,.10);
+    --radius-md:       10px;
+    --radius-lg:       14px;
+}
+
+/* ── Custom Page Background ────────────────────────────────── */
+.customPage {
+    background-color: var(--bg) !important;
+}
+
+/* ── Custom Header Bar ─────────────────────────────────────── */
+.customPage .sapMBar.sapMPageHeader {
+    background: linear-gradient(135deg, #0a6ed1 0%, #085caf 60%, #06478a 100%) !important;
+    box-shadow: 0 3px 16px rgba(10, 110, 209, 0.35) !important;
+    border-bottom: none !important;
+    height: 56px !important;
+}
+
+.headerTitle .sapMTitle {
+    color: #ffffff !important;
+    font-size: 1.1rem !important;
+    font-weight: 700 !important;
+    letter-spacing: .3px;
+}
+
+.headerSubtitle {
+    color: rgba(255,255,255,.75) !important;
+    font-size: .85rem !important;
+}
+
+.headerBtn.sapMBtn {
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,.35) !important;
+}
+.headerBtn.sapMBtn:hover {
+    background: rgba(255,255,255,.15) !important;
+}
+
+/* ── KPI Row ───────────────────────────────────────────────── */
+.kpiRow {
+    gap: 12px;
+}
+
+.kpiTile.sapMGT {
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-sm) !important;
+    border: 1px solid var(--border) !important;
+    transition: transform .18s ease, box-shadow .18s ease !important;
+    min-width: 180px;
+    background: var(--surface) !important;
+}
+
+.kpiTile.sapMGT:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* ── Chart Panels ──────────────────────────────────────────── */
+.chartsRow {
+    gap: 16px;
+}
+
+.chartPanel {
+    flex: 1 1 320px;
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-sm) !important;
+    border: 1px solid var(--border) !important;
+    background: var(--surface) !important;
+    overflow: hidden;
+    min-width: 300px;
+}
+
+.chartPanel .sapMPanelHdr {
+    background: linear-gradient(90deg, var(--brand-light), #ffffff) !important;
+    border-bottom: 1px solid var(--border) !important;
+    font-weight: 600 !important;
+    color: var(--brand-primary) !important;
+    padding: 1px 16px !important;
+}
+
+/* ── Table Toolbar ─────────────────────────────────────────── */
+.tableToolbar.sapMTB {
+    background: var(--surface) !important;
+    border-radius: var(--radius-md) var(--radius-md) 0 0 !important;
+    border: 1px solid var(--border) !important;
+    border-bottom: none !important;
+    padding: 10px 16px !important;
+    box-shadow: none !important;
+}
+
+/* ── Products Table ────────────────────────────────────────── */
+.inventoryTable.sapMList {
+    border-radius: 0 0 var(--radius-md) var(--radius-md) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: var(--shadow-sm) !important;
+    overflow: hidden;
+}
+
+.inventoryTable .sapMListTblHeaderCell {
+    background: #8db3ec !important;
+    font-weight: 700 !important;
+    color: var(--text-secondary) !important;
+    text-transform: uppercase;
+    font-size: .75rem !important;
+    letter-spacing: .5px;
+    border-bottom: 2px solid var(--border) !important;
+}
+
+.inventoryTable .sapMLIB:hover {
+    background: #a3baf0 !important;
+}
+
+.inventoryTable .sapMLIBAlt {
+    background: #fafbfd !important;
+}
+
+/* Product ID badge style */
+.productIdCell .sapMObjectIdentifier .sapMObjectIdentifierTitle {
+    font-family: 'Courier New', monospace !important;
+    font-size: .8rem !important;
+    background: var(--brand-light);
+    color: var(--brand-primary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.productNameCell .sapMObjectIdentifier .sapMObjectIdentifierTitle {
+    font-weight: 600 !important;
+    color: var(--text-primary) !important;
+}
+
+/* Category label pill */
+.categoryLabel.sapMLbl {
+    background: #f0f0f0 !important;
+    border-radius: 12px !important;
+    padding: 2px 10px !important;
+    font-size: .78rem !important;
+    color: var(--text-secondary) !important;
+}
+
+/* ── Action Buttons ────────────────────────────────────────── */
+.actionBtn.sapMBtn {
+    min-width: 36px !important;
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+    border: 1px solid transparent !important;
+    transition: all .15s ease !important;
+}
+
+.actionBtn.sapMBtn:hover {
+    background: var(--brand-light) !important;
+    border-color: var(--brand-primary) !important;
+}
+
+.deleteBtn.sapMBtn:hover {
+    background: #fdf0f0 !important;
+    border-color: var(--error) !important;
+}
+
+.deleteBtn.sapMBtn:hover .sapUiIcon {
+    color: var(--error) !important;
+}
+
+/* ── Footer Bar ────────────────────────────────────────────── */
+.footerBar.sapMTB {
+    background: var(--surface) !important;
+    border-top: 1px solid var(--border) !important;
+    box-shadow: 0 -2px 10px rgba(0,0,0,.05) !important;
+    padding: 0 16px !important;
+}
+
+/* ── Dialog ────────────────────────────────────────────────── */
+.productDialog.sapMDialog {
+    border-radius: var(--radius-lg) !important;
+    box-shadow: 0 20px 60px rgba(0,0,0,.2) !important;
+}
+
+.productDialog .sapMDialogTitle {
+    font-weight: 700 !important;
+    color: var(--brand-primary) !important;
+}
+
+/* ── Dark Mode ─────────────────────────────────────────────── */
+.darkMode,
+.darkMode.sapMPage {
+    background-color: #252323 !important;
+    color: #e0e0e0 !important;
+}
+
+.darkMode .sapMBar.sapMPageHeader {
+    background: linear-gradient(135deg, #0d2137 0%, #0a1929 100%) !important;
+}
+
+.darkMode .kpiTile.sapMGT,
+.darkMode .chartPanel,
+.darkMode .tableToolbar.sapMTB,
+.darkMode .inventoryTable.sapMList,
+.darkMode .footerBar.sapMTB {
+    background: #a19898 !important;
+    border-color: #333 !important;
+}
+
+.darkMode .inventoryTable .sapMListTblHeaderCell {
+    background: #3e4b5c !important;
+    color: #aaa !important;
+    border-color: #333 !important;
+}
+
+.darkMode .inventoryTable .sapMLIB {
+    background: #b1adad !important;
+    border-color: #2a2a2a !important;
+}
+
+.darkMode .inventoryTable .sapMLIBAlt {
+    background: #222222 !important;
+}
+
+.darkMode .inventoryTable .sapMLIB:hover {
+    background: #8c9097 !important;
+}
+
+/* .darkMode .sapMText, */
+.darkMode .sapMTitle,
+.darkMode .sapMLbl {
+    color: #e0e0e0 !important;
+}
+
+.darkMode .productIdCell .sapMObjectIdentifier .sapMObjectIdentifierTitle {
+    background: #0d2137 !important;
+    color: #5ab5f7 !important;
+}
+
+.darkMode .categoryLabel.sapMLbl {
+    background: #2a2a2a !important;
+    color: #aaa !important;
+}
+
+.darkMode .chartPanel .sapMPanelHdr {
+    background: #252525 !important;
+    border-color: #333 !important;
+}
+
+/* ── Responsive Tweaks ─────────────────────────────────────── */
+@media (max-width: 768px) {
+    .kpiTile.sapMGT {
+        min-width: 140px;
+    }
+    .chartPanel {
+        min-width: 100%;
+    }
+}

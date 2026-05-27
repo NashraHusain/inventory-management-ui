@@ -1,0 +1,84 @@
+<core:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:core="sap.ui.core"
+    xmlns:form="sap.ui.layout.form">
+
+    <Dialog id="addProductDialog"
+            title="Add New Product"
+            contentWidth="500px"
+            contentHeight="auto"
+            draggable="true"
+            class="productDialog">
+
+        <content>
+            <form:SimpleForm id="addForm"
+                             editable="true"
+                             layout="ResponsiveGridLayout"
+                             labelSpanL="4" labelSpanM="4"
+                             emptySpanL="1" emptySpanM="1"
+                             columnsL="1" columnsM="1"
+                             class="sapUiSmallMarginTopBottom">
+
+                <form:content>
+
+                    <Label text="Product ID" required="true"/>
+                    <Input id="inputNewID"
+                           placeholder="e.g. P011"
+                           valueLiveUpdate="true"
+                           maxLength="20"/>
+
+                    <Label text="Product Name" required="true"/>
+                    <Input id="inputNewName"
+                           placeholder="Enter product name"
+                           valueLiveUpdate="true"
+                           maxLength="100"/>
+
+                    <Label text="Category" required="true"/>
+                    <ComboBox id="inputNewCategory"
+                              placeholder="Select or type a category">
+                        <core:Item key="Electronics"     text="Electronics"/>
+                        <core:Item key="Furniture"       text="Furniture"/>
+                        <core:Item key="Storage"         text="Storage"/>
+                        <core:Item key="Office Supplies" text="Office Supplies"/>
+                        <core:Item key="Accessories"     text="Accessories"/>
+                        <core:Item key="General"         text="General"/>
+                    </ComboBox>
+
+                    <Label text="Stock Quantity" required="true"/>
+                    <StepInput id="inputNewStock"
+                               min="0"
+                               max="99999"
+                               step="1"
+                               value="0"
+                               displayValuePrecision="0"/>
+
+                    <Label text="Price (₹)" required="true"/>
+                    <Input id="inputNewPrice"
+                           type="Number"
+                           placeholder="0.00"
+                           description="INR"/>
+
+                </form:content>
+            </form:SimpleForm>
+
+            <MessageStrip id="dialogMessageStrip"
+                          text=""
+                          type="Error"
+                          showIcon="true"
+                          visible="false"
+                          class="sapUiSmallMarginBeginEnd sapUiSmallMarginBottom"/>
+        </content>
+
+        <buttons>
+            <Button id="btnConfirmProduct"
+                    text="Add Product"
+                    type="Emphasized"
+                    icon="sap-icon://accept"
+                    press="onConfirmProduct"/>
+            <Button text="Cancel"
+                    icon="sap-icon://cancel"
+                    press="onCancelDialog"/>
+        </buttons>
+    </Dialog>
+
+</core:FragmentDefinition>
